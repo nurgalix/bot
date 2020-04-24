@@ -21,11 +21,8 @@ def send_text(message):
         bot.send_message(message.chat.id, 'Потому что он меня создал.')
     elif message.text.lower() == 'пока':
         bot.send_message(message.chat.id, 'Прощай, создатель')
-
-
-def repeat_messages(message):
-    bot.send_message(message.chat.id, message.text)
-
+    else:
+        bot.send_message(message.chat.id, message.text)
 
 @bot.message_handler(content_types=['sticker'])
 def send_sticker(message):
